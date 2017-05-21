@@ -1,7 +1,7 @@
 {
     "name":"S3 CommandBox Commands",
-    "version":"0.1.0",
-    "location":"pixl8/s3-commandbox-commands#v0.1.0",
+    "version":"{version}",
+    "location":"pixl8/s3-commandbox-commands#v{version}",
     "author":"Pixl8 Interactive",
     "type":"commandbox-modules",
     "homepage":"https://github.com/pixl8/s3-commandbox-commands",
@@ -23,6 +23,7 @@
     "ignore":[
         ".git/*",
         ".gitignore",
-        ".twgit*"
+        ".twgit*",
+        "*.sh"
     ]
 }
