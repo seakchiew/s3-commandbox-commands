@@ -1,0 +1,28 @@
+{
+    "name":"S3 CommandBox Commands",
+    "version":"0.1.0",
+    "location":"pixl8/s3-commandbox-commands#v0.1.0",
+    "author":"Pixl8 Interactive",
+    "type":"commandbox-modules",
+    "homepage":"https://github.com/pixl8/s3-commandbox-commands",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/pixl8/s3-commandbox-commands"
+    },
+    "slug":"s3-commandbox-commands",
+    "shortDescription":"Commands to help with Amazon S3 integration on the CommandBox commandline and package management.",
+    "keywords":"S3,Commands",
+    "private":false,
+    "projectURL":"https://github.com/pixl8/s3-commandbox-commands",
+    "dependencies":{
+        "aws-cfml":"github:jcberquist/aws-cfml"
+    },
+    "installPaths":{
+        "aws-cfml":"aws-cfml"
+    },
+    "ignore":[
+        ".git/*",
+        ".gitignore",
+        ".twgit*"
+    ]
+}
