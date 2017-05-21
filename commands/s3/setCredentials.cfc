@@ -13,22 +13,19 @@ component {
 	 * @secretKey.hint   The secret key of the credential pair
 	 **/
 	function run(
-		  required boolean global
-		, required string  bucket
-		, required string  accessKey
-		, required string  secretKey
+		  boolean global    = false
+		, string  bucket    = ""
+		, string  accessKey = ""
+		, string  secretKey = ""
 	) {
-		if ( !arguments.accesskey.len() ) {
-			print.redLine( "Please enter an AWS access key" );
-			return;
+		while( !arguments.accesskey.len() ) {
+			arguments.accessKey = shell.ask( "Enter your AWS access key: " );
 		}
-		if ( !arguments.secretKey.len() ) {
-			print.redLine( "Please enter an AWS secret key" );
-			return;
+		while( !arguments.secretKey.len() ) {
+			arguments.secretKey = shell.ask( "Enter your AWS secret key: " );
 		}
-		if ( !arguments.global && !arguments.bucket.len() ) {
-			print.redLine( "If the credential is not global, you must specify a bucket. Please enter an S3 bucket name with which to associate the S3 credentials" );
-			return;
+		while( !global && !arguments.bucket.len() ) {
+			arguments.bucket = shell.ask( "Enter your S3 bucket name: " );
 		}
 
 		S3CommandUtils.storeCredentials( argumentCollection=arguments );
