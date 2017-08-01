@@ -36,9 +36,9 @@ component accessors="true" implements="commandbox.system.endpoints.IEndpoint" si
 		}
 
 		var aws = new "commandbox.modules.s3-commandbox-commands.aws-cfml.aws" (
-			  awsKey       = credentials.accessKey
-			, awsSecretKey = credentials.secretKey
-			, region       = region
+			  awsKey        = credentials.accessKey
+			, awsSecretKey  = credentials.secretKey
+			, defaultRegion = region
 		);
 
 		var presignedUrl = "//" & aws.s3.generatePresignedURL(
