@@ -21,7 +21,7 @@ component accessors="true" implements="commandbox.system.endpoints.IEndpoint" si
 		return this;
 	}
 
-	public string function resolvePackage( required string package, boolean verbose=false ) {
+	public string function resolvePackage( required string package, string currentworkingdirectory, boolean verbose=false ) {
 		var bucket      = arguments.package.listFirst( "/" ).listFirst( ":" );
 		var objectKey   = arguments.package.listRest( "/" );
 		var region      = arguments.package.listFirst( "/" ).listRest( ":" );
